@@ -8,6 +8,11 @@ pipeline {
 
     stages {
         stage('Build') {
+            tage('Sonar Scan'){
+            steps{
+                sh label: '', script: 'mvn clean package sonar:sonar'
+            }
+        }
             steps {
                 // Get some code from a GitHub repository
                 git 'https://https://github.com/kmayer10/DevOps-Basics-Batch-4.git'
