@@ -8,7 +8,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            tage('Sonar Scan'){
+            stage('Sonar Scan'){
             steps{
                 sh label: '', script: 'mvn clean package sonar:sonar'
             }
